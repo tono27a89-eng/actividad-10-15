@@ -13,33 +13,36 @@ namespace actividad_10_15
         {
             Console.WriteLine("Cree un diccionario de empleados y muestre un mensaje con el siguiente formato:\r\nID: ___ Nombre: ___");
             Dictionary<int, string> empleados=new Dictionary<int, string>();
-            int ID;
+            int ID=1;
             string nombre;
         
             while( ID != 0 ) 
             {
 
 
-                Console.WriteLine($"Ingrese  ID NO.{i + 1} de empleados, mientras que no sea 0 continuara");
-                int.TryParse(Console.ReadLine(), out clave);
-                if (producto.ContainsKey(clave))
+                Console.WriteLine($"Ingrese  ID de empleados, mientras que no sea 0 continuara");
+                int.TryParse(Console.ReadLine(), out ID);
+                if (ID == 0)
+                {
+
+                }
+                else if (empleados.ContainsKey(ID))
                 {
                     Console.WriteLine("valor ya ingresado ingrese otro");
-                    i--;
-
+                   
                 }
                 else
                 {
                     Console.WriteLine("ingrese nombre:");
                     nombre = Console.ReadLine();
-                    producto.Add(clave, nombre);
+                    empleados.Add(ID, nombre);
 
                 }
 
             }
-            foreach (var item in producto)
+            foreach (var item in empleados)
             {
-                Console.WriteLine("prodcuto Id: " + item.Key + "valor: " + item.Value);
+                Console.WriteLine(" Id:  " + item.Key + "Nombre:  " + item.Value);
 
             }
 
