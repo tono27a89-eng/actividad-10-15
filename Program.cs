@@ -20,7 +20,7 @@ namespace actividad_10_15
             {
 
 
-                Console.WriteLine($"Ingrese  ID de empleados, mientras que no sea 0 continuara");
+                Console.WriteLine($"Ingrese  ID de empleados, Ingrese 0 para continuar");
                 int.TryParse(Console.ReadLine(), out ID);
                 if (ID == 0)
                 {
