@@ -24,7 +24,7 @@ namespace actividad_10_15
                 int.TryParse(Console.ReadLine(), out ID);
                 if (ID == 0)
                 {
-
+                    // esta de mas pero por tiempo 
                 }
                 else if (empleados.ContainsKey(ID))
                 {
