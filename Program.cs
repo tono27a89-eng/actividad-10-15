@@ -12,12 +12,15 @@ namespace actividad_10_15
         static void Main(string[] args)
         {
             Console.WriteLine("Cree un diccionario de empleados y muestre un mensaje con el siguiente formato:\r\nID: ___ Nombre: ___");
-
-            for (int i = 0; i < 3; i++)
+            Dictionary<int, string> empleados=new Dictionary<int, string>();
+            int ID;
+            string nombre;
+        
+            while( ID != 0 ) 
             {
 
 
-                Console.WriteLine($"Ingrese  ID NO.{i + 1} de 3 productos");
+                Console.WriteLine($"Ingrese  ID NO.{i + 1} de empleados, mientras que no sea 0 continuara");
                 int.TryParse(Console.ReadLine(), out clave);
                 if (producto.ContainsKey(clave))
                 {
